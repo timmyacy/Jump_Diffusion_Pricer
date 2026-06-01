@@ -1,12 +1,12 @@
 #include "carr_madan.h"
-#include "../fft/fft.h"
+#include "fft.h"
 CarrMadan::CarrMadan(const Model &model, double r, double T, int N, double eta,
                      double alpha)
     : model_(model), r_(r), T_(T), N_(N), eta_(eta), alpha_(alpha) {};
 
 double CarrMadan::price(double S0, double K) const {
 
-  double b = N_ * eta_;
+  double b = 2.0 * M_PI / eta_;
   std::vector<std::complex<double>> input(N_);
   for (int i = 0; i < N_; i++) {
 
@@ -51,7 +51,6 @@ double CarrMadan::price(double S0, double K) const {
   if (idx < 0 || idx >= N_)
     return 0.0;
 
-  double call = (std::exp(-alpha_ * k) / M_PI) * output[idx].real();
-
+  double call = S0 * (std::exp(-alpha_ * k) / M_PI) * output[idx].real();
   return call;
 };

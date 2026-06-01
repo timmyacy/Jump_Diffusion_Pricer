@@ -1,6 +1,18 @@
-cmake_minimum_required (VERSION 3.31)
-project (JumpDiffusionPricer)
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-add_executable(main main.cpp)
+cmake_minimum_required(VERSION 3.15)
+project(JumpDiffusionPricer)
+
+set(CMAKE_CXX_STANDARD 17)
+include_directories(
+    ${CMAKE_SOURCE_DIR}
+    ${CMAKE_SOURCE_DIR}/models
+    ${CMAKE_SOURCE_DIR}/pricers
+    ${CMAKE_SOURCE_DIR}/fft
+)
+add_executable(JumpDiffusionPricer
+    main.cpp
+    models/black_scholes.cpp
+    pricers/carr_madan.cpp
+    fft/fft.cpp
+)
+
+target_include_directories(JumpDiffusionPricer PRIVATE ${CMAKE_SOURCE_DIR})
