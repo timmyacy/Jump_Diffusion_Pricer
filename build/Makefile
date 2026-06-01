@@ -92,13 +92,6 @@ all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tajibode/CLionProjects/Jump_Diff_Pricer/build/CMakeFiles 0
 .PHONY : all
 
-# The main codegen target
-codegen: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tajibode/CLionProjects/Jump_Diff_Pricer/build/CMakeFiles /Users/tajibode/CLionProjects/Jump_Diff_Pricer/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 codegen
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tajibode/CLionProjects/Jump_Diff_Pricer/build/CMakeFiles 0
-.PHONY : codegen
-
 # The main clean target
 clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
@@ -124,24 +117,48 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named JumpDiffusionPricer
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
-.PHONY : main
+JumpDiffusionPricer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 JumpDiffusionPricer
+.PHONY : JumpDiffusionPricer
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+JumpDiffusionPricer/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JumpDiffusionPricer.dir/build.make CMakeFiles/JumpDiffusionPricer.dir/build
+.PHONY : JumpDiffusionPricer/fast
+
+fft/fft.o: fft/fft.cpp.o
+.PHONY : fft/fft.o
+
+# target to build an object file
+fft/fft.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JumpDiffusionPricer.dir/build.make CMakeFiles/JumpDiffusionPricer.dir/fft/fft.cpp.o
+.PHONY : fft/fft.cpp.o
+
+fft/fft.i: fft/fft.cpp.i
+.PHONY : fft/fft.i
+
+# target to preprocess a source file
+fft/fft.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JumpDiffusionPricer.dir/build.make CMakeFiles/JumpDiffusionPricer.dir/fft/fft.cpp.i
+.PHONY : fft/fft.cpp.i
+
+fft/fft.s: fft/fft.cpp.s
+.PHONY : fft/fft.s
+
+# target to generate assembly for a file
+fft/fft.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JumpDiffusionPricer.dir/build.make CMakeFiles/JumpDiffusionPricer.dir/fft/fft.cpp.s
+.PHONY : fft/fft.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JumpDiffusionPricer.dir/build.make CMakeFiles/JumpDiffusionPricer.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -149,7 +166,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JumpDiffusionPricer.dir/build.make CMakeFiles/JumpDiffusionPricer.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -157,8 +174,56 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JumpDiffusionPricer.dir/build.make CMakeFiles/JumpDiffusionPricer.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+models/black_scholes.o: models/black_scholes.cpp.o
+.PHONY : models/black_scholes.o
+
+# target to build an object file
+models/black_scholes.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JumpDiffusionPricer.dir/build.make CMakeFiles/JumpDiffusionPricer.dir/models/black_scholes.cpp.o
+.PHONY : models/black_scholes.cpp.o
+
+models/black_scholes.i: models/black_scholes.cpp.i
+.PHONY : models/black_scholes.i
+
+# target to preprocess a source file
+models/black_scholes.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JumpDiffusionPricer.dir/build.make CMakeFiles/JumpDiffusionPricer.dir/models/black_scholes.cpp.i
+.PHONY : models/black_scholes.cpp.i
+
+models/black_scholes.s: models/black_scholes.cpp.s
+.PHONY : models/black_scholes.s
+
+# target to generate assembly for a file
+models/black_scholes.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JumpDiffusionPricer.dir/build.make CMakeFiles/JumpDiffusionPricer.dir/models/black_scholes.cpp.s
+.PHONY : models/black_scholes.cpp.s
+
+pricers/carr_madan.o: pricers/carr_madan.cpp.o
+.PHONY : pricers/carr_madan.o
+
+# target to build an object file
+pricers/carr_madan.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JumpDiffusionPricer.dir/build.make CMakeFiles/JumpDiffusionPricer.dir/pricers/carr_madan.cpp.o
+.PHONY : pricers/carr_madan.cpp.o
+
+pricers/carr_madan.i: pricers/carr_madan.cpp.i
+.PHONY : pricers/carr_madan.i
+
+# target to preprocess a source file
+pricers/carr_madan.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JumpDiffusionPricer.dir/build.make CMakeFiles/JumpDiffusionPricer.dir/pricers/carr_madan.cpp.i
+.PHONY : pricers/carr_madan.cpp.i
+
+pricers/carr_madan.s: pricers/carr_madan.cpp.s
+.PHONY : pricers/carr_madan.s
+
+# target to generate assembly for a file
+pricers/carr_madan.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JumpDiffusionPricer.dir/build.make CMakeFiles/JumpDiffusionPricer.dir/pricers/carr_madan.cpp.s
+.PHONY : pricers/carr_madan.cpp.s
 
 # Help Target
 help:
@@ -166,13 +231,21 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... codegen"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... main"
+	@echo "... JumpDiffusionPricer"
+	@echo "... fft/fft.o"
+	@echo "... fft/fft.i"
+	@echo "... fft/fft.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... models/black_scholes.o"
+	@echo "... models/black_scholes.i"
+	@echo "... models/black_scholes.s"
+	@echo "... pricers/carr_madan.o"
+	@echo "... pricers/carr_madan.i"
+	@echo "... pricers/carr_madan.s"
 .PHONY : help
 
 

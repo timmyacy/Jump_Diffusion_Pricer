@@ -63,11 +63,11 @@ CMAKE_BINARY_DIR = /Users/tajibode/CLionProjects/Jump_Diff_Pricer/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/main.dir/all
+all: CMakeFiles/JumpDiffusionPricer.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/main.dir/codegen
+codegen: CMakeFiles/JumpDiffusionPricer.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -75,40 +75,40 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/main.dir/clean
+clean: CMakeFiles/JumpDiffusionPricer.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/main.dir
+# Target rules for target CMakeFiles/JumpDiffusionPricer.dir
 
 # All Build rule for target.
-CMakeFiles/main.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/tajibode/CLionProjects/Jump_Diff_Pricer/build/CMakeFiles --progress-num=1,2 "Built target main"
-.PHONY : CMakeFiles/main.dir/all
+CMakeFiles/JumpDiffusionPricer.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JumpDiffusionPricer.dir/build.make CMakeFiles/JumpDiffusionPricer.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JumpDiffusionPricer.dir/build.make CMakeFiles/JumpDiffusionPricer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/tajibode/CLionProjects/Jump_Diff_Pricer/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target JumpDiffusionPricer"
+.PHONY : CMakeFiles/JumpDiffusionPricer.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tajibode/CLionProjects/Jump_Diff_Pricer/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
+CMakeFiles/JumpDiffusionPricer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tajibode/CLionProjects/Jump_Diff_Pricer/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/JumpDiffusionPricer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tajibode/CLionProjects/Jump_Diff_Pricer/build/CMakeFiles 0
-.PHONY : CMakeFiles/main.dir/rule
+.PHONY : CMakeFiles/JumpDiffusionPricer.dir/rule
 
 # Convenience name for target.
-main: CMakeFiles/main.dir/rule
-.PHONY : main
+JumpDiffusionPricer: CMakeFiles/JumpDiffusionPricer.dir/rule
+.PHONY : JumpDiffusionPricer
 
 # codegen rule for target.
-CMakeFiles/main.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/tajibode/CLionProjects/Jump_Diff_Pricer/build/CMakeFiles --progress-num=1,2 "Finished codegen for target main"
-.PHONY : CMakeFiles/main.dir/codegen
+CMakeFiles/JumpDiffusionPricer.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JumpDiffusionPricer.dir/build.make CMakeFiles/JumpDiffusionPricer.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/tajibode/CLionProjects/Jump_Diff_Pricer/build/CMakeFiles --progress-num=1,2,3,4,5 "Finished codegen for target JumpDiffusionPricer"
+.PHONY : CMakeFiles/JumpDiffusionPricer.dir/codegen
 
 # clean rule for target.
-CMakeFiles/main.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/clean
-.PHONY : CMakeFiles/main.dir/clean
+CMakeFiles/JumpDiffusionPricer.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JumpDiffusionPricer.dir/build.make CMakeFiles/JumpDiffusionPricer.dir/clean
+.PHONY : CMakeFiles/JumpDiffusionPricer.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
