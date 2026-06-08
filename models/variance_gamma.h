@@ -11,6 +11,7 @@ public:
                                               double T) const override;
 
   double simulate(double S0, double T, std::mt19937 &rng) const override;
+
   // Getters
   double sigma() const { return sigma_; }
   double nu() const { return nu_; }
@@ -23,5 +24,5 @@ private:
   double theta_;
   double r_;
   double q_;
-  double omega_; // precomputed risk-neutral correction
+  double omega_;
 };

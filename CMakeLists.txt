@@ -12,7 +12,9 @@ add_executable(JumpDiffusionPricer
     main.cpp
     models/black_scholes.cpp
     pricers/carr_madan.cpp
+    pricers/mc.cpp
     fft/fft.cpp
+    models/variance_gamma.cpp
 )
 
 target_include_directories(JumpDiffusionPricer PRIVATE ${CMAKE_SOURCE_DIR})

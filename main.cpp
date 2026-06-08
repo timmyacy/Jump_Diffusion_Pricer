@@ -4,7 +4,8 @@
 
 #include "black_scholes.h"
 #include "carr_madan.h"
-
+#include "mc.h"
+#include "variance_gamma.h"
 // Standard normal CDF using erfc
 double N(double x) { return 0.5 * std::erfc(-x / std::sqrt(2.0)); }
 
@@ -35,6 +36,16 @@ int main() {
   std::cout << "Carr-Madan : " << cm << "\n";
   std::cout << "Closed form: " << bf << "\n";
   std::cout << "Difference : " << std::abs(cm - bf) << "\n";
+
+  VarianceGamma vg(0.20, 1e-6, 0.0, r);
+  CarrMadan vg_cm(vg, r, T, 4096, 0.25, 1.5);
+  MonteCarlo vg_mc(vg, r, T, 500000);
+  double vg_cf_price = vg_cm.price(S0, K);
+  double vg_mc_price = vg_mc.price(S0, K);
+  std::cout << "VG Carr-Madan : " << vg_cf_price << "\n";
+  std::cout << "VG Monte Carlo: " << vg_mc_price << "\n";
+  std::cout << "Difference    : " << std::abs(vg_cf_price - vg_mc_price)
+            << "\n";
 
   return 0;
 }

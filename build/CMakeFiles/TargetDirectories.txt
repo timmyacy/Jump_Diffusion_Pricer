@@ -1,3 +1,0 @@
-/Users/tajibode/CLionProjects/Jump_Diff_Pricer/build/CMakeFiles/JumpDiffusionPricer.dir
-/Users/tajibode/CLionProjects/Jump_Diff_Pricer/build/CMakeFiles/edit_cache.dir
-/Users/tajibode/CLionProjects/Jump_Diff_Pricer/build/CMakeFiles/rebuild_cache.dir

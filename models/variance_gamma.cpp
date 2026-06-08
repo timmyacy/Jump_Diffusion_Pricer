@@ -1,7 +1,6 @@
 #include "variance_gamma.h"
 #include <cmath>
 #include <random>
-#include <stdexcept>
 
 using cd = std::complex<double>;
 VarianceGamma::VarianceGamma(double sigma, double nu, double theta, double r,
